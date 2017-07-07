@@ -1,3 +1,4 @@
+require('./menu-item-list.scss');
 import React from 'react';
 import {connect} from 'react-redux';
 import {selectItem} from '../actions/action';

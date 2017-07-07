@@ -1,31 +1,18 @@
-.menu {
-    background-color: #eee;
-    border: 3px solid #ccc;
-    padding: 5px;
-    border-radius: 8px;
-  
-    &__title {
-        color: #666;
-        font: normal 16px Arial;
-    }
-
-    &__items {
+ .menu__items {
         background-color: #fff;
         border: 2px solid #ccc;
         border-radius: 8px;
         list-style: none;
     }
 
-    &__item {
+ .menu__item {
         cursor: pointer;
         padding: 5px 10px;
         margin: 5px; 
-
-
+        
         &--selected {
             background-color: #89bdd3;
             padding: 5px 10px;
             margin: 5px; 
         }
     }
-}

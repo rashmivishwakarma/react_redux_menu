@@ -1,4 +1,4 @@
-require('./menuList.scss');
+require('./menu-list.scss');
 import React from 'react';
 import MenuItemList from '../../containers/MenuItemList';
 
