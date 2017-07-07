@@ -1,4 +1,4 @@
-# react_CRUD
+# react_redux_menu
 
 clone repository on your system
 
