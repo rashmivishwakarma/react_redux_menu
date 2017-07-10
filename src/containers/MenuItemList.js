@@ -3,15 +3,14 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {selectItem} from '../actions/action';
 import {bindActionCreators} from 'redux';
-import store from '../index';
 
 //CONTAINER COMPONENT
 class MenuItemList extends React.Component {
 
     createMenuItems(){
         return this.props.items.map((item) => {
-            if(store){
-                if(store.getState().menuReducer.id === item.id){
+            if(this.props.clickedItem){
+                if(this.props.clickedItem.id === item.id){
                     return <li className='menu__item menu__item--selected' key={item.id} onClick={() => this.props.selectItem(item)}>{item.itemName}</li>
                 }else {
                     return <li className='menu__item' key={item.id} onClick={() => this.props.selectItem(item)}>{item.itemName}</li>
@@ -34,7 +33,8 @@ class MenuItemList extends React.Component {
 //FUNCTION FROM REACT-REDUX
 function mapStateToProps(state){
     return {
-        items: state.menuDataReducer
+        items: state.menuDataReducer,
+        clickedItem: state.menuReducer
     }
 }
 
